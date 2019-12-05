@@ -20,7 +20,8 @@ Basic Setup of Node JS projects
   - npm is node.js node package manager.
   - node modules are modules that won't affect code and useful as inbuilt functions.
 
-### References  : freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/
+### References  :
+ [freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5](http://www.freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/)
 
 ### Execute node script
 `node filename.js`
