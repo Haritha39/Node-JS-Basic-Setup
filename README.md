@@ -1,13 +1,13 @@
 # Node-JS-Basic-Setup
 Basic Setup of Node JS projects
 
-### What is exactly Node JS ?
+### What is exactly Node.JS ?
   - Node.js is a JavaScript runtime built on the V8 JavaScript engine.
   - Runtime Environment means like java JRE.
   - JRE has JVM and modules/libraries inside it.
   - Node has modules/libraries and v8 engine inside it.
   - Can call it as node.js , nodejs and node no problem.
-### Why Node JS ?
+### Why Node.JS ?
   - Generally javascript is understandle to browser only but developers want js to run our machines , so they developed node js out of that thought.
   - Browser has different js engines like v8 javascript engine by chrome , chakra by microsoft ,spidermonkey by mozilla etc.
   - Node is built on v8 engine written in c++ .
