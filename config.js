@@ -1,2 +1,0 @@
-
-//  Configuration regarding databased etc

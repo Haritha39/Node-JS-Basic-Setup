@@ -1,12 +1,27 @@
 {
-    "scripts": {
-
-    },
-    "dependencies": {
-
-    },
-    "devDependencies": {
-
-    },
-    "version": ""
+  "name": "node-js-tutorial",
+  "version": "1.0.0",
+  "description": "Node JS Tutorial Practise",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haritha39/Node-JS-Basic-Setup.git"
+  },
+  "keywords": [
+    "nodejs",
+    "backend"
+  ],
+  "author": "Haritha K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haritha39/Node-JS-Basic-Setup/issues"
+  },
+  "homepage": "https://github.com/Haritha39/Node-JS-Basic-Setup#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
