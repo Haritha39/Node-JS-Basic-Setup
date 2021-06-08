@@ -30,7 +30,7 @@ const output3= require('./utility');
 output3.log("Hello!! Utility");
 
 //ES6
-// mjs-modulejs cjs-commonjs
+// mjs-modulejs ṁṇcjs-commonjs
 // Method 1
 // import log,{hello} from './es6.js';
 // log('This is default export ES6');
