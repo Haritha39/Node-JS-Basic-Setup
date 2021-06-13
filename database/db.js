@@ -15,7 +15,8 @@ connection.connect((err) => {
         console.log(err);
     }
 });
-let query = "";
+module.exports = connection;
+// let query = "";
 // Create Database
 // query = "CREATE DATABASE nodetraining"
 // connection.query(query, (err, result) => {
@@ -146,11 +147,11 @@ let id="1 or 1=1";
 // });
 // Delete a record
 // query = `DELETE FROM users`; // Deletes all the records and starts indexing from last index but trancate starts id from 1
-query = `DELETE FROM users where ?`;
-connection.query(query,[{id:2}], (err, result) => {
-    if (!err) {
-        console.log("Successfully Deleted record");
-    } else {
-        console.log(err);
-    }
-});
+// query = `DELETE FROM users where ?`;
+// connection.query(query,[{id:2}], (err, result) => {
+//     if (!err) {
+//         console.log("Successfully Deleted record");
+//     } else {
+//         console.log(err);
+//     }
+// });

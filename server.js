@@ -1,24 +1,24 @@
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const connection = require('./database/db');
+const app = express();
+const port = 3000;
 
-const http=require('http');
-const hostname="localhost";
-const port=3000;
-const server = http.createServer((req,res)=>{
-    res.statusCode=200;
-    res.setHeader('Content-Type','text/html');
-    res.end('<h1>Hello World!!!</h1>')
-});
-server.listen(port,hostname,()=>{
-    console.log(`Server is running on ${hostname} : ${port}`);
+app.use(cors({ origin: "*" }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(function (req, res, next) {
+  req.connection = connection;
+  next();
 });
 
-var ProgressBar = require('progress');
- 
-var bar = new ProgressBar(':percent', {complete:"+", total: 100 });
-var timer = setInterval(function () {
-  bar.tick();
-  if (bar.complete) {
-    console.log('\ncomplete\n');
-    clearInterval(timer);
-    process.exit(1); //0-success , 1-error
-  }
-}, 10);
+// Route
+const router = require('./routes');
+app.use("/api", router.user);
+app.use("/api", router.topics);
+
+app.listen(port, () => {
+  console.log("Server is running on port: " + port);
+});
