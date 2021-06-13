@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <!-- Install ejs extension and avai syntax help-->
+        <!-- Include -->
+        <%- include('template/head') %>
+        <!-- Basic HTML Rendering -->
+        <h1 style="color: brown;">Welcome <%= user.email %></h1>
+        <!-- Conditions -->
+        <% if(user.role==='user'){%>
+            <h2>Normal User</h2>
+        <%} else if(user.role==='admin'){%>
+            <h2>Admin User</h2>
+        <%} else {%>
+            <h2>Else</h2>
+        <%}%>
+        <!-- For Loop -->
+        <% for(let i=0;i<5;i++){ %>
+            <h2><%= i %></h2>
+        <%}%>
+        <!-- Foreach -->
+        <% [1,2,3].forEach(element=>{ %>
+            <h2 style="color: chartreuse;"> <%= element %></h2>
+        <%})%>
+
+        <h1><%= user.email %> </h1>
+
+        <%- include('template/footer') %>
+    </body>
+</html>

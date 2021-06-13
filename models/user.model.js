@@ -1,4 +1,9 @@
 let query="";
+
+const login=(connection,data,callback)=>{
+    query="SELECT *,'' as password FROM users WHERE ? AND ?"
+    connection.query(query,[{email:data.email},{password:data.password}],callback);
+};
 const create=(connection,data,callback)=>{
     query="INSERT INTO users SET ?"
     connection.query(query,[data],callback);
@@ -25,5 +30,5 @@ const deleteUser=(connection,id,callback)=>{
 };
 
 module.exports={
-    create,getAll,getOne,updateUser,deleteUser
+    login,create,getAll,getOne,updateUser,deleteUser
 }
